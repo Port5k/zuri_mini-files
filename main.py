@@ -1,26 +1,31 @@
-# Check if two words are anagrams 
-# Example:
-# find_anagrams("hello", "check") --> False
-# find_anagrams("below", "elbow") --> True
+class Student:
+    def __init__(self, name, age, tracks, score):
+        self.name = name
+        self.age = age
+        self.tracks = []
+        self.score = score
 
+    def change_name(self, name):
+        self.name = name
 
-def find_anagram(word, anagram):
-    split_word = []
-    split_word.extend(word)
+    def change_age(self, age):
+        self.age = age
 
-    word_check_rating = 0
+    def add_track(self, track):
+        self.tracks.append(track)
+
+    def get_score(self):
+        print(self.score)
+
     
-    for char in split_word:
-        if char in anagram:
-            word_check_rating += 1
-        else:
-            word_check_rating += 0
-            
-    if word_check_rating < len(anagram):
-        print(False)
-    else:
-        print(True)
-
         
-find_anagram("below", "elbow")
-find_anagram("hello", "check")
+
+
+
+Bob = Student(name="Bob", age=26, tracks=["FE","BE"],score=20.90)
+
+# Expected methods
+Bob.change_name("Peter")
+Bob.change_age(34)
+Bob.add_track("UI/UX")
+Bob.get_score()
