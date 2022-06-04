@@ -4,6 +4,11 @@
 # find_anagrams("below", "elbow") --> True
 
 
+print("Enter the word to be checked: ")
+word = str(input())
+print("Enter the anagram which the word is to be checked against: ")
+anagram = str(input())
+
 def find_anagram(word, anagram):
     split_word = []
     split_word.extend(word)
@@ -21,6 +26,8 @@ def find_anagram(word, anagram):
     else:
         print(True)
 
+
+find_anagram(word, anagram)
+
         
-find_anagram("below", "elbow")
-find_anagram("hello", "check")
+
